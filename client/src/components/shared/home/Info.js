@@ -12,10 +12,11 @@ const Info = () => (
       </Col>
       <Col md='6' sm='12'>
         <h1>
-          another Header text goes here
+          Check out pawsome cats while 
+          enjoying some Kit-teas
         </h1>
         <p>
-          Bacon ipsum dolor amet picanha leberkas buffalo pancetta ham hock fatback shoulder rump. Filet mignon ham ball tip pork belly shoulder bacon short loin. Landjaeger ball tip fatback, chicken boudin cupim turkey rump meatball turducken. Leberkas andouille pastrami meatball sausage tenderloin prosciutto beef ribs. Drumstick hamburger tongue biltong, swine pig kielbasa beef ribs jowl brisket. Corned beef kevin alcatra, short ribs tenderloin boudin tail pork chop beef shoulder.
+          Meow Meow Meow Meow Meow Meow!
         </p>
       </Col>
     </Row>
