@@ -10,14 +10,15 @@ const Headline = () => (
     />
     <Container>
       <Row >
-        <Col md='6' sm='11' >
-          <h2>
-            Cat Cafe
-          </h2>
+        <Col md='6' sm='12' >
+          <h1>
+            Enjoy a catpuccio in a Purrfect catmostphere
+          </h1>
         </Col>
         <Col md='6' sm='12'>
           <p>
-            Bacon ipsum dolor amet picanha leberkas buffalo pancetta ham hock fatback shoulder rump. Filet mignon ham ball tip pork belly shoulder bacon short loin. Landjaeger ball tip fatback, chicken boudin cupim turkey rump meatball turducken. Leberkas andouille pastrami meatball sausage tenderloin prosciutto beef ribs. Drumstick hamburger tongue biltong, swine pig kielbasa beef ribs jowl brisket. Corned beef kevin alcatra, short ribs tenderloin boudin tail pork chop beef shoulder.
+            Have purrsuasive ecperience with purrty darn cute kittys 
+            in the biggest meowment of the century.
           </p>
           <Row>
             <Col>
