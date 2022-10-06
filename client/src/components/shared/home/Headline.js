@@ -10,8 +10,10 @@ const Headline = () => (
     />
     <Container>
       <Row >
-        <Col md='6' sm='12' >
-          <h1>Med Length Hero headline</h1>
+        <Col md='6' sm='11' >
+          <h2>
+            Cat Cafe
+          </h2>
         </Col>
         <Col md='6' sm='12'>
           <p>
