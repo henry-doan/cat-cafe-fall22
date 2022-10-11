@@ -1,5 +1,6 @@
 import { Image, Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { Slide } from 'react-awesome-reveal';
 
 const Headline = () => (
   <>
@@ -11,31 +12,39 @@ const Headline = () => (
     <Container>
       <Row >
         <Col md='6' sm='12' >
-          <h1>
-            Enjoy a catpuccio in a Purrfect catmostphere
-          </h1>
+          <Slide 
+            direction='left'
+          >
+            <h1>
+              Enjoy a catpuccio in a Purrfect catmostphere
+            </h1>
+          </Slide>
         </Col>
         <Col md='6' sm='12'>
-          <p>
-            Have purrsuasive ecperience with purrty darn cute kittys 
-            in the biggest meowment of the century.
-          </p>
-          <Row>
-            <Col>
-              <Link to='/register'>
-                <Button>
-                  Signup
-                </Button>
-              </Link>
-            </Col>
-            <Col>
-              <Link to='/login'>
-                <Button>
-                  Login
-                </Button>
-              </Link>
-            </Col>
-          </Row>
+          <Slide
+            direction='right'
+          >
+            <p>
+              Have purrsuasive experience with purrty darn cute kittys 
+              in the biggest meowment of the century.
+            </p>
+            <Row>
+              <Col>
+                <Link to='/register'>
+                  <Button>
+                    Signup
+                  </Button>
+                </Link>
+              </Col>
+              <Col>
+                <Link to='/login'>
+                  <Button>
+                    Login
+                  </Button>
+                </Link>
+              </Col>
+            </Row>
+          </Slide>
         </Col>
       </Row>
     </Container>
