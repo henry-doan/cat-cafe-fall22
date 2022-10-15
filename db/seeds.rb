@@ -12,7 +12,7 @@ i = 1
   )
   i++
 
-  10.times do 
+  100.times do 
     name = Faker::Creature::Cat.name
     cat = Cat.create(
       name: name, 
