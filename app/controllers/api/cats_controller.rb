@@ -5,7 +5,7 @@ class Api::CatsController < ApplicationController
 
   # current_user - obj of current login user info
   def index
-    render json: current_user.cats 
+    paginate json: current_user.cats
   end
 
   def show

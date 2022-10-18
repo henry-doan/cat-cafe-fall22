@@ -2,15 +2,37 @@ import CatList from './CatList';
 import { useEffect, useState } from 'react';
 import { CatConsumer } from '../../providers/CatProvider';
 import CatForm from './CatForm';
-import { Button, Modal } from 'react-bootstrap';
+import { Button, Modal, Pagination } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const Cats = ({ cats, getAllCats }) => {
+const Cats = ({ cats, getAllCats, pagination }) => {
   const [adding, setAdd] = useState(false);
+  const [pages, setPages] = useState([])
+  const [active, setActive] = useState(1);
 
   useEffect( () => {
     getAllCats()
+    renderPages()
   }, [])
+
+  const renderPages = () => {
+    let items = [];
+    for (let num = 1; num <= pagination; num++) {
+      items.push(
+        <Pagination.Item 
+          key={num} 
+          active={parseInt(num) === parseInt(active)}
+          onClick={() => {
+            getAllCats(num)
+            setActive(num)
+          }}
+        >
+          {num}
+        </Pagination.Item>
+      )
+    }
+    setPages(items)
+  }
 
   return (
     <>
@@ -40,6 +62,7 @@ const Cats = ({ cats, getAllCats }) => {
       <CatList
         cats={cats}
       />
+      <Pagination>{pages}</Pagination>
     </>
   )
 }

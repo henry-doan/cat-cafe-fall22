@@ -10,11 +10,19 @@ const CatProvider = ({ children }) => {
   const [cats, setCats] = useState([])
   const [randomCat, setRandomCat] = useState(null)
   const [errors, setErrors] = useState(null)
+  const [pagination, setPagination] = useState(1)
+  const [headers, setHeaders] = useState({})
   const navigate = useNavigate()
 
-  const getAllCats = () => {
-    axios.get('/api/cats')
-      .then(res => setCats(res.data))
+  const getAllCats = (page = 1) => {
+    axios.get(`/api/cats?page=${page}`)
+      .then(res => {
+        const { data, headers } = res 
+        const totalPages = Math.ceil(headers['x-total'] / headers['x-per-page'])
+        setPagination(totalPages)
+        setCats(data)
+        setHeaders(headers)
+      })
       .catch(err => {
         setErrors({ 
           variant: 'danger',
@@ -90,7 +98,9 @@ const CatProvider = ({ children }) => {
       updateCat, 
       deleteCat, 
       randomCat, 
-      getRandomCat, 
+      getRandomCat,
+      pagination,
+      headers, 
     }}>
       { children }
     </CatContext.Provider>
